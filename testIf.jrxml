@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fa9b6447-b94d-4794-aea1-9f48e2bb1d2a">
+    <parameter name="teste" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch"/>
+    </title>
+    <pageHeader>
+        <band height="35" splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="75" splitType="Stretch">
+            <staticText>
+                <reportElement x="180" y="0" width="200" height="30" uuid="968f069b-c930-49da-acd1-0cbb730d1baf"/>
+                <textElement textAlignment="Center">
+                    <font size="20"/>
+                </textElement>
+                <text><![CDATA[Teste IF]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="110" splitType="Stretch">
+            <printWhenExpression><![CDATA[$P{teste}.equals("1")]]></printWhenExpression>
+            <staticText>
+                <reportElement x="10" y="10" width="180" height="80" uuid="560bbbbe-70b1-4aed-9b59-8274a6870465"/>
+                <textElement textAlignment="Center">
+                    <font size="20"/>
+                </textElement>
+                <text><![CDATA[Primeiro detalhe]]></text>
+            </staticText>
+        </band>
+        <band height="90">
+            <printWhenExpression><![CDATA[$P{teste}.equals("2")]]></printWhenExpression>
+            <staticText>
+                <reportElement x="10" y="5" width="180" height="80" uuid="793e00e3-f09d-4c55-b403-e600c1af472e"/>
+                <textElement textAlignment="Center">
+                    <font size="20"/>
+                </textElement>
+                <text><![CDATA[Segundo detalhe]]></text>
+            </staticText>
+        </band>
+        <band height="50"/>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>
